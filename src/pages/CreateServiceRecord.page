@@ -1,0 +1,21 @@
+<apex:page sidebar="true" extensions="CreateServiceRecordController" showHeader="true" standardController="WorkOrder" docType="HTML-5.0">
+    <apex:form > 
+        <apex:pageblock >
+           <!--buttons-->
+
+	    
+          
+          <apex:pageBlockSection columns="2" >
+              <apex:input value="{!record.numberOfAgents}" label="Number of Agents:"/>
+              <apex:selectList value="{!record.serviceTypeId}" size="1" label="Type of Service:">
+                <apex:selectOptions value="{!items}"/>
+              </apex:selectList>
+          </apex:pageBlockSection>
+          
+          <apex:pageblockButtons >
+	          <apex:commandButton value="Create" action="{!doCreate}"/>
+	      </apex:pageblockButtons>
+        </apex:pageblock>
+    
+    </apex:form>
+</apex:page>
